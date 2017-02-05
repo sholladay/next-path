@@ -24,15 +24,28 @@ Get it into your program.
 const nextPath = require('next-path');
 ```
 
-Add the next path segment.
+Determine the next path, one step closer to the destination.
 
 ```js
-console.log(nextPath('/a', '/a/b/c'));  // => '/a/b'
-```
-
-```js
+console.log(nextPath('a', 'a/b/c'));  // => 'a/b'
 console.log(nextPath('../', '../../../'));  // => '../..'
 ```
+
+## API
+
+### nextPath(from, to)
+
+#### from
+
+Type: `string`
+
+The base path that both `to` and the result will be relative to.
+
+#### to
+
+Type: `string`
+
+The path you want to move one step closer to.
 
 ## Contributing
 
